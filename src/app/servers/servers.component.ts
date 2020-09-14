@@ -19,14 +19,20 @@ import { Component, OnInit } from '@angular/core';
    * If we use HTML as external file, we add templateUrl
    * If we use HTML in this component we use template and back tick marks
    */
-  template: `
-            <app-server></app-server>
-            <app-server></app-server>`,
+  // template: `
+  //           <app-server></app-server>
+  //           <app-server></app-server>`,
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.scss']
 })
 export class ServersComponent implements OnInit {
+  allowNewServer = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {
   }
