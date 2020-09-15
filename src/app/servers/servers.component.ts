@@ -30,6 +30,10 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
 
+  // Assignment 23.Practicing databinding
+  username = '';
+
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
