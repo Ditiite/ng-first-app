@@ -1,1 +1,11 @@
-<p>{{ 'Server' }}Server with ID {{ serverID }} is {{ getServerStatus() }}</p>
+
+<!-- 
+    Style directive. [] means that we want to bind to some property on this directive 
+    ngStyle: allows us to change css style itself
+    ngClass: allows dynamically add or remove css classes
+-->
+<p
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{ online: serverStatus === 'online'}">
+    {{ 'Server' }} Server with ID {{ serverID }} is {{ getServerStatus() }}
+</p>
